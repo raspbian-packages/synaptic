@@ -1,4 +1,4 @@
-synaptic (0.83+rpi1+nmu1) stretch-staging; urgency=medium
+synaptic (0.84.1+rpi1) stretch-staging; urgency=medium
 
   [changes brought forward from 0.81.2+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Fri, 01 Aug 2014 01:51:30 +0000]
   * Fix build on raspbian (see: #744371).
@@ -6,15 +6,60 @@ synaptic (0.83+rpi1+nmu1) stretch-staging; urgency=medium
   [changes introduced in 0.83+rpi1+nmu1 by Peter Michael Green]
   * Force build system to apply patches for Debian regardless of system.
 
- -- Raspbian forward porter <root@raspbian.org>  Sat, 08 Oct 2016 00:56:01 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Thu, 19 Jan 2017 05:12:54 +0000
 
-synaptic (0.83+nmu1) unstable; urgency=medium
+synaptic (0.84.1) unstable; urgency=medium
 
-  * Non-maintainer upload.
-  * Fix FTBFS with GCC6 (Closes: #811857)
-    + New patch 99_fix_build_with_gcc6, cherry-picked from git.
+  [ Vadim Kalmakov ]
+  * updated ru.po translation
 
- -- Olly Betts <olly@survex.com>  Sun, 02 Oct 2016 09:50:57 +1300
+  [ Michael Vogt ]
+  * revert back to use http for changelogs
+    (thanks to Viktor Jägersküpper)
+
+ -- Michael Vogt <mvo@debian.org>  Fri, 06 Jan 2017 22:22:49 +0100
+
+synaptic (0.84) unstable; urgency=medium
+
+  [ Michael Vogt ]
+  * Fix build with gcc6.
+    Thanks to Martin Michlmayer (Closes: #811857)
+  * Use GtkSearchEntry widget for the quick-filter
+  * Fix polish translation of 'Newsgroups' (Closes: 810152)
+  * po/sv.po: updated Swedish translation.
+    Thanks to Anders Jonsson (Closes: 793597)
+
+  [ muzena ]
+  * Make croatian manual, translate hr.po... 
+
+  [ rezso ]
+  * Update Hungarian translation
+
+  [ Jonathan ]
+  * Use https instead of http for links
+  * Fixed typos and conventions
+
+  [ devel ]
+  * Added treeview-fetch expand to windows_fetch.ui.
+  * Fix "99synaptic" path using FindDir.
+
+  [ Antonio Cebrián ]
+  * Fixed typo in path
+
+  [ Phil Miller ]
+  * Set debconf/apt-listchanges to gtk in terminal frontend (Closes: #422427)
+
+  [ Sergey Alyoshin ]
+  * Add "Visit Homepage" tooltip to translation (Closes: #701666)
+  * Updated Russian man-page (Closes: #721378)
+
+  [ Josh Triplett ]
+  * Add sections for Rust and JavaScript
+
+  [ Anders Jonsson ]
+  * [intl:SV] updated Swedish translation (closes: #793597)
+
+ -- Michael Vogt <mvo@debian.org>  Thu, 05 Jan 2017 11:33:54 +0100
 
 synaptic (0.83) unstable; urgency=medium
 

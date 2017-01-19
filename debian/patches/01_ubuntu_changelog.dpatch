@@ -42,7 +42,7 @@ diff -urNad bug.153966.452564~/common/rpackage.cc bug.153966.452564/common/rpack
 +            if(verstr.find(':')!=verstr.npos)
 +               verstr=string(verstr, verstr.find(':')+1);
 +            out << "The list of changes is not available yet.\n" << endl;
-+            out << "Please use http://launchpad.net/ubuntu/+source/"<< srcPackage() << 
++            out << "Please use https://launchpad.net/ubuntu/+source/"<< srcPackage() << 
 +                "/" << verstr << "/+changelog" << endl;
 +            out << "until the changes become available or try again later." << endl;
 +         } else {
