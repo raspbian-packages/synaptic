@@ -1,4 +1,4 @@
-synaptic (0.84.1+rpi1) stretch-staging; urgency=medium
+synaptic (0.84.2+rpi1) stretch-staging; urgency=medium
 
   [changes brought forward from 0.81.2+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Fri, 01 Aug 2014 01:51:30 +0000]
   * Fix build on raspbian (see: #744371).
@@ -6,7 +6,19 @@ synaptic (0.84.1+rpi1) stretch-staging; urgency=medium
   [changes introduced in 0.83+rpi1+nmu1 by Peter Michael Green]
   * Force build system to apply patches for Debian regardless of system.
 
- -- Raspbian forward porter <root@raspbian.org>  Thu, 19 Jan 2017 05:12:54 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Thu, 16 Mar 2017 21:25:41 +0000
+
+synaptic (0.84.2) unstable; urgency=medium
+
+  [ Simon McVittie ]
+  * Depend on policykit-1 instead of recommending
+    gksu|kdebase-bin|policykit-1. data/synaptic.desktop.in and
+    debian/synaptic.menu both use debian/synaptic-pkexec, which
+    unconditionally runs pkexec. (Closes: #856520)
+  * Pushing the recommendation up to a Depends ensures that the menu entry
+    can in fact be launched (Closes: #415408)
+
+ -- Michael Vogt <mvo@debian.org>  Thu, 09 Mar 2017 16:28:15 +0100
 
 synaptic (0.84.1) unstable; urgency=medium
 
