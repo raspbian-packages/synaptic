@@ -1,4 +1,4 @@
-synaptic (0.84.2+rpi1) stretch-staging; urgency=medium
+synaptic (0.84.3+rpi1) buster-staging; urgency=medium
 
   [changes brought forward from 0.81.2+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Fri, 01 Aug 2014 01:51:30 +0000]
   * Fix build on raspbian (see: #744371).
@@ -6,7 +6,42 @@ synaptic (0.84.2+rpi1) stretch-staging; urgency=medium
   [changes introduced in 0.83+rpi1+nmu1 by Peter Michael Green]
   * Force build system to apply patches for Debian regardless of system.
 
- -- Raspbian forward porter <root@raspbian.org>  Thu, 16 Mar 2017 21:25:41 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Sun, 25 Mar 2018 01:47:30 +0000
+
+synaptic (0.84.3) unstable; urgency=medium
+
+  [ gogogogi ]
+  * Update Synaptic version
+
+  [ Jose A. Múrcia ]
+  * Update ca@valencia.po
+
+  [ hugo ]
+  * Fixed a small inconsistency in fr.po
+
+  [ Michael Vogt ]
+  * fix user-mode synaptic to not crash under wayland
+  * add some more things to gitignore
+
+  [ Brahim Djoudi ]
+  * Removal of empty declarations
+
+  [ Olivier Humbert ]
+  * Update the French translation
+  * Update fr.po
+
+  [ AsciiWolf ]
+  * Update Czech translation
+
+  [ Gunnar Hjalmarsson ]
+  * Fix missing closing b tag in german translation
+  * Strip translations in Ubuntu
+  * Reverse fix of do missing closing b tag in po.de
+
+  [ Tobias Bannert ]
+  * Updated german translation
+
+ -- Michael Vogt <mvo@ubuntu.com>  Sun, 18 Mar 2018 21:50:39 +0100
 
 synaptic (0.84.2) unstable; urgency=medium
 
