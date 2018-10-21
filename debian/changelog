@@ -1,4 +1,4 @@
-synaptic (0.84.3+rpi1) buster-staging; urgency=medium
+synaptic (0.84.4+rpi1) buster-staging; urgency=medium
 
   [changes brought forward from 0.81.2+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Fri, 01 Aug 2014 01:51:30 +0000]
   * Fix build on raspbian (see: #744371).
@@ -6,7 +6,25 @@ synaptic (0.84.3+rpi1) buster-staging; urgency=medium
   [changes introduced in 0.83+rpi1+nmu1 by Peter Michael Green]
   * Force build system to apply patches for Debian regardless of system.
 
- -- Raspbian forward porter <root@raspbian.org>  Sun, 25 Mar 2018 01:47:30 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Sun, 21 Oct 2018 14:35:56 +0000
+
+synaptic (0.84.4) unstable; urgency=medium
+
+  [ AsciiWolf ]
+  * Update Synaptic version
+
+  [ muzena ]
+  * Update cro lng
+
+  [ gogogogi ]
+  * Update hr.po
+
+  [ Simon Ochsenreither ]
+  * Improve some details of the main window interface
+  * Fix segfault due to not returning anything from a bool function
+  * Hide the toolbar's center element (quick search) if we don't display it
+
+ -- Michael Vogt <mvo@ubuntu.com>  Mon, 15 Oct 2018 07:48:48 +0200
 
 synaptic (0.84.3) unstable; urgency=medium
 
