@@ -1,4 +1,4 @@
-synaptic (0.84.5+rpi1) buster-staging; urgency=medium
+synaptic (0.84.6+rpi1) buster-staging; urgency=medium
 
   [changes brought forward from 0.81.2+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Fri, 01 Aug 2014 01:51:30 +0000]
   * Fix build on raspbian (see: #744371).
@@ -6,7 +6,22 @@ synaptic (0.84.5+rpi1) buster-staging; urgency=medium
   [changes introduced in 0.83+rpi1+nmu1 by Peter Michael Green]
   * Force build system to apply patches for Debian regardless of system.
 
- -- Raspbian forward porter <root@raspbian.org>  Tue, 13 Nov 2018 05:40:57 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Sat, 27 Apr 2019 12:36:38 +0000
+
+synaptic (0.84.6) unstable; urgency=medium
+
+  [ sajolida ]
+  * Give visual feedback while starting
+
+  [ Shengjing Zhu ]
+  * configure.in: Miss bumping version str to 0.84.5
+  * synaptic-pkexec: Do not use pkexec under Wayland; warn users instead
+  * gsynaptic: Show possible reason when failed to init gtk
+
+  [ Michael Vogt ]
+  * configure.in: Bump version to 0.84.6
+
+ -- Michael Vogt <mvo@debian.org>  Mon, 15 Apr 2019 09:39:32 +0200
 
 synaptic (0.84.5) unstable; urgency=medium
 
@@ -16,7 +31,7 @@ synaptic (0.84.5) unstable; urgency=medium
   [ Guillem Jover ]
   * Update sections and their descriptions (Closes: #880482)
 
- -- Michael Vogt <mvo@ubuntu.com>  Thu, 08 Nov 2018 08:50:31 +0100
+ -- Michael Vogt <mvo@ubuntu.com>  Mon, 15 Apr 2019 09:39:26 +0200
 
 synaptic (0.84.4) unstable; urgency=medium
 
