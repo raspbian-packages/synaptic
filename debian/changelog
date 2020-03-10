@@ -1,4 +1,4 @@
-synaptic (0.90+rpi1) bullseye-staging; urgency=medium
+synaptic (0.90+rpi1+nmu1) bullseye-staging; urgency=medium
 
   [changes brought forward from 0.81.2+rpi1 by Peter Michael Green <plugwash@raspbian.org> at Fri, 01 Aug 2014 01:51:30 +0000]
   * Fix build on raspbian (see: #744371).
@@ -6,7 +6,21 @@ synaptic (0.90+rpi1) bullseye-staging; urgency=medium
   [changes introduced in 0.83+rpi1+nmu1 by Peter Michael Green]
   * Force build system to apply patches for Debian regardless of system.
 
- -- Raspbian forward porter <root@raspbian.org>  Fri, 31 Jan 2020 18:29:31 +0000
+ -- Raspbian forward porter <root@raspbian.org>  Tue, 10 Mar 2020 20:19:01 +0000
+
+synaptic (0.90+nmu1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+
+  [ Debian Janitor ]
+  * Wrap long lines in changelog entries: 0.63.2, 0.63.1ubuntu3,
+    0.55+cvs20041119-1ubuntu4.
+
+  [ Julian Andres Klode ]
+  * Port to APT 1.9.11: Use pkgCacheFile instead of manually opening cache
+    (Closes: #953311)
+
+ -- Julian Andres Klode <jak@debian.org>  Sun, 08 Mar 2020 14:46:39 +0100
 
 synaptic (0.90) unstable; urgency=medium
 
@@ -1062,7 +1076,8 @@ synaptic (0.63.2) unstable; urgency=low
   * set textarea read-only in generic error dialog (LP: #403100)
   * Change 'Icon Legend' dialog to fixed size (LP: #374376)
   * add tooltip to 'properties' and 'search' buttons (LP: #202681)
-  * * gtk/rgpreferenceswindow.cc: escape '@/:%' in proxy auth string (LP: 130289)
+  * * gtk/rgpreferenceswindow.cc: escape '@/:%' in proxy auth string (LP:
+    130289)
 
  -- Michael Vogt <mvo@debian.org>  Wed, 28 Jul 2010 11:40:15 +0200
 
@@ -1227,7 +1242,8 @@ synaptic (0.63.1ubuntu4) lucid; urgency=low
 synaptic (0.63.1ubuntu3) lucid; urgency=low
 
   [ Jean-Baptiste Lallement ]
-  * * gtk/rgpreferenceswindow.cc: escape '@/:%' in proxy auth string (LP: 130289)
+  * * gtk/rgpreferenceswindow.cc: escape '@/:%' in proxy auth string (LP:
+    130289)
   * Sort by relevancy when doing quicksearch and no search column is set.
   * debian/patches/10_ubuntu_maintenance_gui.dpatch:
   - Fix mixed-language maintenance status when LC_TIME differs from LC_MESSAGES
@@ -2797,7 +2813,8 @@ synaptic (0.55+cvs20041213-1) hoary; urgency=low
 
 synaptic (0.55+cvs20041119-1ubuntu4) hoary; urgency=low
 
-  * added "--update-at-startup" cmdline option (for upgrade-notifier and update-manager)
+  * added "--update-at-startup" cmdline option (for upgrade-notifier and
+    update-manager)
 
  -- Michael Vogt <mvo@debian.org>  Sun, 28 Nov 2004 13:52:33 +0100
 
