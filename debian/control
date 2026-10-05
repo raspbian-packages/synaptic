@@ -1,0 +1,47 @@
+Source: synaptic
+Section: admin
+Priority: optional
+Maintainer: Michael Vogt <mvo@debian.org>
+Build-Depends: debhelper-compat (= 12),
+               desktop-file-utils,
+               gettext,
+               libapt-pkg-dev,
+               libgtest-dev,
+               libgtk-3-dev,
+               libpolkit-gobject-1-dev,
+               libsm-dev,
+               libvte-2.91-dev,
+               libxapian-dev,
+               lsb-release,
+               meson,
+               ninja-build,
+               xmlto
+Build-Conflicts: librpm-dev
+Standards-Version: 4.5.0
+Vcs-Git: https://github.com/mvo5/synaptic.git
+Homepage: https://github.com/mvo5/synaptic/wiki
+X-Ubuntu-Use-Langpack: yes
+Vcs-Browser: https://github.com/mvo5/synaptic
+
+Package: synaptic
+Architecture: any
+Depends: hicolor-icon-theme,
+         pkexec | systemd,
+         polkitd,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Recommends: libgtk3-perl, xdg-utils
+Suggests: apt-xapian-index, deborphan, dwww, software-properties-gtk, tasksel
+Description: Graphical package manager
+ Synaptic is a graphical package management tool based on GTK and APT.
+ Synaptic enables you to install, upgrade and remove software packages in
+ a user-friendly way.
+ .
+ Besides these basic functions the following features are provided:
+  * Search and filter the list of available packages
+  * Perform smart system upgrades
+  * Fix broken package dependencies
+  * Edit the list of used repositories (sources.list)
+  * Download the latest changelog of a package
+  * Configure packages through the debconf system
+  * Browse all available documentation related to a package (dwww is required)

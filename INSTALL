@@ -1,0 +1,65 @@
+Installation Instructions
+*************************
+
+Synaptic is built with the meson build system.
+
+Requirements
+============
+
+ * meson and ninja
+ * a C++17 compiler (g++ or clang++)
+ * GTK+ 3 (>= 3.4)
+ * libapt-pkg development headers (libapt-pkg-dev)
+ * polkit (libpolkit-gobject-1-dev)
+ * optional: VTE (libvte-2.91-dev) for the built-in terminal
+ * optional: Xapian (libxapian-dev) for the quick search filter
+ * optional: xmlto to build the help files
+
+On Debian/Ubuntu the build dependencies can be installed with:
+
+    sudo apt build-dep ./
+    sudo apt install meson ninja-build
+
+Building
+========
+
+    meson setup builddir
+    meson compile -C builddir
+
+The resulting binary is builddir/gtk/synaptic.
+
+To run the test suite:
+
+    meson test -C builddir --print-errorlogs
+
+Installing
+==========
+
+    sudo meson install -C builddir
+
+By default this installs under /usr/local. To install to a different
+prefix, configure with e.g.:
+
+    meson setup builddir --prefix=/usr
+
+The official Debian package is configured with:
+
+    --prefix=/usr --localstatedir=/var/lib/synaptic -Dpkg_hold=true
+
+Build options
+=============
+
+Options are set with -Doption=value at setup time, or later with
+'meson configure builddir -Doption=value'. See meson_options.txt for
+the full list:
+
+ * scripts (boolean, default false): enable the extension system
+ * dpkg_progress (feature, default enabled): dpkg progress bar support
+ * launchpad_integration (boolean, default false): launchpad support
+ * pkg_hold (boolean, default false): experimental package hold feature
+ * apt_multiarch_support (boolean, default true): apt multiarch support
+
+Building the Debian package
+===========================
+
+    debuild -B -us -uc
